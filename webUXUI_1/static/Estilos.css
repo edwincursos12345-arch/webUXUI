@@ -377,7 +377,7 @@ nav>ul>li:hover .nav_ul_1 {
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        background-color: rgb(252, 189, 71);
+        background-color: rgb(250, 195, 93);
     }
 
     .div_logos1 {
@@ -389,7 +389,7 @@ nav>ul>li:hover .nav_ul_1 {
     }
 
     .div_logos3 {
-        background-color: rgb(252, 189, 71);
+        background-color: rgb(250, 195, 93);
         text-align: center;
     }
 
