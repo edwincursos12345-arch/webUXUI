@@ -83,8 +83,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'webUXUI.wsgi.application'
-# waitress-serve --listen=*:8000 myapp.wsgi:application
-# waitress-serve --listen=127.0.0.1:5000 predict:app
+# waitress-serve --listen=*:8000 webUXUI.wsgi.application
 
 CSRF_TRUSTED_ORIGINS = ['https://webuxui.onrender.com']
 

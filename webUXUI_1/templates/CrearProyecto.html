@@ -1,6 +1,6 @@
 {% extends "index.html" %}
 
-{% block title %}<title>Crear Proyecto</title>{% endblock title%}
+{% block title %}<title>Crear Proyecto</title>{% endblock title %}
 
 {% block content %}
 
@@ -42,9 +42,10 @@
 
         <form class="form_proyectos" action="" method="post">
 
+            {% csrf_token %}
+
             {{error}}
 
-            {% csrf_token %}
             {{form.as_p}}
             <div class="div_button">
                 <button class="button1">Crear Proyecto</button>

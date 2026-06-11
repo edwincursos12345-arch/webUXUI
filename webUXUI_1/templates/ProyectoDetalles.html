@@ -1,6 +1,6 @@
 {% extends "index.html" %}
 
-{% block title %}<title>Proyecto Detalles</title>{% endblock title%}
+{% block title %}<title>Proyecto Detalles</title>{% endblock title %}
 
 {% block content %}
 
@@ -40,12 +40,13 @@
 
     <div class="container_date_user">
 
-        <!-- {{proyecto.title}} -->
+        <!-- {# {{proyecto.title}} #} -->
 
         <form class="form_proyectos" action="" method="POST">
 
-            {{error}}
             {% csrf_token %}
+
+            {{error}}
             {{form}}
 
             <div class="div_button">
