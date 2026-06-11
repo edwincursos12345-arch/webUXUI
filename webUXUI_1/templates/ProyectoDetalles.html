@@ -54,7 +54,7 @@
             </div>
         </form>
 
-        <form action="{% url 'ProyectoCompletado' proyecto.id %}" method="POST">
+        <form class="form_proyectos" action="{% url 'ProyectoCompletado' proyecto.id %}" method="POST">
 
             {% csrf_token %}
             <div class="div_button">
