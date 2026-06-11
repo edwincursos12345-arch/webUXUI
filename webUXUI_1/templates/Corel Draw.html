@@ -1,0 +1,157 @@
+{% extends "index.html" %}
+
+{% block title %}<title>Corel Draw</title>{% endblock title%}
+
+
+{% block content %}
+
+{% load static %}
+
+<div class="main_container">
+
+    <div class="main_title">
+        <h1>Diseños en <br> Corel Draw</h1>
+    </div>
+
+    <div class="description">
+        <p class="p_description p_description1">Las siguientes IMÁGENES han sido realizados por mi persona, teniendo
+            como referencia las
+            PUBLICIDADES encontradas en INTERNET.</p>
+    </div>
+
+    <p class="title_description title_description1">GALERÍA de IMÁGENES realizados en COREL DRAW:</p>
+
+    <div class="slider_images">
+
+        <div class="container_images" id="container_images">
+
+            <div class="container_img">
+                <img class="img_slider" src="{% static 'Img/PublicidadCorel_1.png' %}" alt="">
+            </div>
+
+            <div class="container_img">
+                <img class="img_slider" src="{% static 'Img/PublicidadCorel_2.png' %}" alt="">
+            </div>
+
+            <div class="container_img">
+                <img class="img_slider" src="{% static 'Img/PublicidadCorel_3.png' %}" alt="">
+            </div>
+        </div>
+
+        <div class="slider_button slider_buttonPrev" id="buttonPrev">
+            <img src="{% static 'Img/icon-arrow-black.png' %}" alt="">
+        </div>
+
+        <div class="slider_button slider_buttonNext" id="buttonNext">
+            <img src="{% static 'Img/icon-arrow-black.png' %}" alt="">
+        </div>
+    </div>
+
+    <!-- <div class="carousel_imgs">
+
+        <div class="carousel_arrow carousel_prev" id="button_prev" data-button="button_prev"
+            onclick="app.processingButton(event)">
+            <img src="{% static 'Img/icon-arrow-black.png' %}" alt="">
+        </div>
+
+        <div class="carousel_track" id="track">
+            <div class="carousel">
+                <div>
+                    <h4><small>Imagen</small>Mas</h4>
+                    <picture>
+                        <img src="{% static 'Img/Publicidad.png' %}" alt="imagen">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="carousel">
+                <div>
+                    <h4><small>Imagen</small>Mas</h4>
+                    <picture>
+                        <img src="{% static 'Img/Publicidad_1.png' %}" alt="imagen">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="carousel">
+                <div>
+                    <h4><small>Imagen</small>Mas</h4>
+                    <picture>
+                        <img src="{% static 'Img/Publicidad_2.png' %}" alt="imagen">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="carousel">
+                <div>
+                    <h4><small>Imagen</small>Mas</h4>
+                    <picture>
+                        <img src="{% static 'Img/Publicidad.png' %}" alt="imagen">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="carousel">
+                <div>
+                    <h4><small>Imagen</small>Mas</h4>
+                    <picture>
+                        <img src="{% static 'Img/Publicidad_1.png' %}" alt="imagen">
+                    </picture>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel_arrow carousel_next" id="button_next" data-button="button_next"
+            onclick="app.processingButton(event)">
+            <img src="{% static 'Img/icon-arrow-black.png' %}" alt="">
+        </div>
+    </div> -->
+
+    <p class="title_description">IMÁGENES</p>
+
+    <div class="container_imgs" id="lista_imgs">
+        <div class="div_img">
+            <img src="{% static 'Img/PublicidadCorel_1.png' %}" alt="">
+
+            <div class="details_img">
+
+                <div>
+                    <h5>Imagen 1</h5>
+                    <p class="precio">Precio: <br> <span>$ 50.00</span></p>
+                </div>
+
+                <a class="agregar_carrito" href="#" data-id="1">Agregar a Carrito</a>
+            </div>
+        </div>
+
+        <div class="div_img">
+            <img src="{% static 'Img/PublicidadCorel_2.png' %}" alt="">
+
+            <div class="details_img">
+
+                <div class="price_img">
+                    <h5>Imagen 2</h5>
+                    <p class="precio">Precio: <br> <span>$ 50.00</span></p>
+                </div>
+
+                <a class="agregar_carrito" href="#" data-id="2">Agregar a Carrito</a>
+            </div>
+        </div>
+
+        <div class="div_img">
+            <img src="{% static 'Img/PublicidadCorel_3.png' %}" alt="">
+
+            <div class="details_img">
+
+                <div class="price_img">
+                    <h5>Imagen 3</h5>
+                    <p class="precio">Precio: <br> <span>$ 50.00</span></p>
+                </div>
+
+                <a class="agregar_carrito" href="#" data-id="3">Agregar a Carrito</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Estilos.css' %}">
+
+    {% block title %}<title>Index</title>{% endblock title %}
+
+</head>
+
+<body>
+    <nav class="nav">
+        <p class="logo">LOGO</p>
+
+        <div class="menu_img">
+            <img src="{% static 'Img/menu.png' %}" alt="">
+        </div>
+
+        <ul class="nav_ul">
+            <li>
+                <a class="nav_a" href="/">Index</a>
+            </li>
+
+            <li>
+                <a class="nav_a" href="/inicio_sesión">Iniciar Sesión</a>
+
+                <ul class="nav_ul_1">
+                    <li class="nav_li_1"><a class="nav_a" href="/inicio_sesión">Iniciar Sesión</a></li>
+                    <li class="nav_li_1"><a class="nav_a" href="/crear_usuario">Nuevo Usuario</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a class="nav_a" href="/CorelDraw">Corel Draw</a>
+            </li>
+
+            <li>
+                <a class="nav_a" href="/Illustrator">Illustrator</a>
+            </li>
+
+            <li>
+                <a class="nav_a" href="/Photoshop">Photoshop</a>
+            </li>
+
+            <li class="nav_a nav_carrito">
+                <img src="{% static 'Img/carrito.png' %}" id="img-carrito" alt="">
+                <div class="carrito" id="carrito">
+                    <table class="table_car" id="table_car">
+                        <thead>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody"></tbody>
+                    </table>
+
+                    <p class="vaciar_carrito" id="vaciar_carrito">Vaciar Carrito</p>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="div_nav"></div>
+
+    <!-- {# {% if user.is_authenticated %} #}
+    
+    <div class="div_menu_img1">
+        <div class="menu_img1">
+            <img src="{% static 'Img/menu.png' %}" alt="">
+        </div>
+    </div>
+
+    <nav class="nav_user">
+        <ul class="ul_user">
+            <li class="li_user">
+                <a class="a_user" href="/Proyectos">Proyectos</a>
+            </li>
+
+            <li class="li_user">
+                <a class="a_user" href="/proyectos_completados">Proyectos Completados</a>
+            </li class="li_user">
+
+            <li class="li_user">
+                <a class="a_user" href="/CrearProyecto">Crear Proyecto</a>
+            </li>
+
+            <li class="li_user">
+                <a class="a_user" href="/logout">Cerrar Sesión</a>
+            </li>
+
+            <li>
+                <a href="/ProyectoDetalles">ProyectoDetalles</a>
+            </li>
+
+            {# {% else %} #}
+
+        </ul>
+    </nav> 
+    {# {% endif %} #} -->
+
+    {% block content %}
+
+    <div class="main_container">
+
+        <div class="main_title">
+            <h1>Programas y Lenguajes <br>Utilizados en la Creación de Esta Aplicación Web</h1>
+        </div>
+
+        <h2 class="title_description">
+            Los trabajos para la creación de esta Aplicación Web, con Diseño RESPONSIVE, se realizaron en
+            <strong>FRONTEND y
+                BACKEND</strong>.
+        </h2>
+
+        <section class="description">
+
+            <p class="p_description">Las Imágenes que aparecen en las páginas con los siguientes Enlaces: <a
+                    class="a_main" href="/CorelDraw">Corel Draw</a>, <a class="a_main"
+                    href="/Illustrator">Illustrator</a> y <a class="a_main" href="/Photoshop">Photoshop</a>, a los
+                cuales
+                tambien se puede acceder a través del NAVBAR, han sido realizados por mi persona con los siguientes
+                PROGRAMAS:
+            </p>
+
+            <div class="div_logos div_logos1">
+                <div class="div_logos2">
+                    <p class="title_logo">COREL DRAW</p>
+                    <div class="div_logo">
+                        <img src="{% static 'Img/logo Corel.png' %}" alt="">
+                    </div>
+                </div>
+
+                <div class="div_logos2">
+                    <P class="title_logo">ILLUSTRATOR</P>
+                    <div class="div_logo">
+                        <img src="{% static 'Img/logo illustrator.png' %}" alt="">
+                    </div>
+                </div>
+
+                <div class="div_logos2">
+                    <P class="title_logo">PHOTOSHOP</P>
+                    <div class="div_logo">
+                        <img src="{% static 'Img/logo photoshop.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+            <p class="p_description">
+            </p>
+        </section>
+
+
+        <h2 class="title_description">Construcción del <strong>FRONTEND</strong></h2>
+
+        <section class="description">
+
+            <P class="p_description">Para la construcción del FRONTEND, se Utilizaron:</P>
+
+            <div class="div_logos3">
+                <div class="div_logos4">
+                    <div class="div_logos5">
+                        <p class="title_logo">HTML</p>
+                        <div class="div_logo">
+                            <img src="{% static 'Img/logo html.png' %}" alt="">
+                        </div>
+                    </div>
+
+                    <div class="div_logos5">
+                        <p class="title_logo">CSS</p>
+                        <div class="div_logo">
+                            <img src="{% static 'Img/logo css.png' %}" alt="">
+                        </div>
+                    </div>
+
+                    <div class="div_logos5">
+                        <p class="title_logo">JS</p>
+                        <div class="div_logo">
+                            <img src="{% static 'Img/logo js.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <p>- <strong>JS</strong> ha sido utilizado para la creación del "Carrito de Compras", que se observa en
+                    el NAVBAR, y la GALERÍA de Imágenes presentados en las páginas con
+                    los siguientes Enlaces: <a class="a_main" href="/CorelDraw">Corel Draw</a>, <a class="a_main"
+                        href="/Illustrator">Illustrator</a> y <a class="a_main" href="/Photoshop">Photoshop</a>, a los
+                    cuales también se puede acceder a través del NAVBAR.</p>
+            </div>
+
+            <p class="p_description">Como programa previo para el Diseño UX/UI se Utilizó:</p>
+
+            <div class="div_logos">
+                <p class="title_logo">FIGMA</p>
+                <div class="div_logo">
+                    <img src="{% static 'Img/logo figma.png' %}" alt="">
+                </div>
+            </div>
+
+            <p class="p_description"></p>
+        </section>
+
+
+        <h2 class="title_description">Construcción del <strong>BACKEND</strong></h2>
+
+        <section class="description">
+
+            <p class="p_description">La Construcción del BACKEND se basa en el Lenguaje de Programación:</p>
+
+            <div class="div_logos">
+                <p class="title_logo">PYTHON</p>
+                <div class="div_logo">
+                    <img src="{% static 'Img/logo python.png' %}" alt="">
+                </div>
+            </div>
+
+            <p class="p_description">Utilizando el FRAMEWORK:</p>
+
+            <div class="div_logos">
+                <p class="title_logo">DJANGO</p>
+                <div class="div_logo">
+                    <img src="{% static 'Img/logo django.png' %}" alt="">
+                </div>
+            </div>
+
+            <p class="p_description">Además de la navegación DINÁMICA que se observa en esta Aplicación WEB, los
+                trabajos
+                del BACKEND,
+                se puede observar con más detalle, en el siguiente Enlace: <a class="a_main"
+                    href="/inicio_sesión">Inciar Sesión</a>, al cual
+                tambien se puede acceder a través del NAVBAR.</p>
+        </section>
+    </div>
+
+    {% endblock %}
+
+
+    <footer class="footer">
+
+        <ul class="nav_footer">
+
+            <li>
+                <a class="a_footer" href="/">Index</a>
+            </li>
+
+            <li>
+                <a class="a_footer" href="/inicio_sesión">Iniciar Sesión</a>
+            </li>
+
+            <li>
+                <a class="a_footer" href="/CorelDraw">Corel Draw</a>
+            </li>
+
+            <li>
+                <a class="a_footer" href="/Illustrator">Illustrator</a>
+            </li>
+
+            <li>
+                <a class="a_footer" href="/Photoshop">Photoshop</a>
+            </li>
+        </ul>
+
+        <div class="p_footer">
+            <p>Copyright@DerechosReservados</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'Web.js' %}"></script>
+
+</body>
+
+</html>

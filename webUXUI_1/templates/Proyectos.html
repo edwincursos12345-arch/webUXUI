@@ -1,0 +1,103 @@
+{% extends "index.html" %}
+
+{% block title %}<title>Proyectos</title>{% endblock title %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="div_menu_img1">
+    <div class="menu_img1">
+        <img src="{% static 'Img/menu.png' %}" alt="">
+    </div>
+</div>
+
+<nav class="nav_user">
+    <ul class="ul_user">
+        <li class="li_user">
+            <a class="a_user" href="/Proyectos">Proyectos</a>
+        </li>
+
+        <li class="li_user">
+            <a class="a_user" href="/proyectos_completados">Proyectos Concluidos</a>
+        </li class="li_user">
+
+        <li class="li_user">
+            <a class="a_user" href="/CrearProyecto">Crear Proyecto</a>
+        </li>
+
+        <li class="li_user">
+            <a class="a_user" href="/logout">Cerrar Sesión</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container_user">
+
+    <h1 class="container_title">Proyectos</h1>
+
+    <h1 class="container_title1">Proyectos</h1>
+
+    <div class="container_date_user">
+
+        <table class="table_proyectos">
+            <thead>
+                <tr>
+                    <th class="th_proyectos">Título</th>
+                    <!-- <th class="th_proyectos">Usuario</th> -->
+                    <th class="th_proyectos">Descripción</th>
+                    <th class="th_proyectos">Fecha de Concluido el Proyecto</th>
+                    <th class="th_proyectos">Actualizar Datos</th>
+                    <th class="th_proyectos">Eliminar</th>
+                </tr>
+            </thead>
+        </table>
+
+        {% for proyecto in proyectos %}
+        <!-- <a class="a_proyectos" href="{# {% url 'ProyectoDetalles' proyecto.id %} #} "> -->
+        <table class="table_proyectos">
+            <tbody>
+                <tr>
+                    <td class="td_proyectos">
+                        {% if proyecto.Importante %}
+                        <strong class="projects_important">{{proyecto.title}}</strong>
+                        {% else %}
+                        {{proyecto.title}}
+                        {% endif %}
+                    </td>
+
+                    <!-- <td class="td_proyectos">
+                        {# {{proyecto.user.username}} #}
+                        
+                    </td> -->
+
+                    <td class="td_proyectos">
+                        <p> {{proyecto.Descripción}} </p>
+                    </td>
+
+                    <td class="td_proyectos">
+                        <p> {{proyecto.datecompleted|date:'M j Y:i'}} </p>
+                    </td>
+
+                    <td class="td_proyectos">
+                        <a class="a_proyectos" href="{% url 'ProyectoDetalles' proyecto.id %}">Actualizar</a>
+                    </td>
+
+                    <td class="td_proyectos">
+                        <form action="{% url 'ProyectoEliminado' proyecto.id %}" method="POST">
+                            {% csrf_token %}
+                            <button class="button1 button2">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="container_user1"></div>
+
+<script src="{% static 'web_1.js' %}"></script>
+
+{% endblock %}

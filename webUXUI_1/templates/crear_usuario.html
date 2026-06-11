@@ -1,0 +1,93 @@
+{% extends "index.html" %}
+
+{% block title %}<title>Crear Usuario</title>{% endblock title%}
+
+{% block content %}
+
+<form action="" method="POST">
+
+    {% csrf_token %}
+    <p class="form_p">{{error}}</p>
+
+    <!-- <div>
+        <h1>About</h1>
+        {# {{form.as_p}} #}
+        
+
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" class="" placeholder="Escribe tu Usuario">
+        </div>
+
+        <div>
+            <label for="password1">Contraseña:</label>
+            <input type="password" name="password1" id="password1" class="" placeholder="Escribe tu Contraseña">
+        </div>
+
+        <div>
+            <label for="password2">Confirma tu Contraseña:</label>
+            <input type="password" name="password2" id="password2" class="" placeholder="Confirma tu Contraseña">
+        </div>
+
+        <button>Enviar</button>
+    </div> -->
+
+    <table class="table_inicioSesión">
+        <thead>
+            <th colspan="2">
+                <h1 class="th_1">Registrate</h1>
+            </th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="td_input">
+                    <label class="td_label" for="username">Nombre:</label>
+                </td>
+                <td class="td_input">
+                    <input class="input_register" type="text" name="username" id="username"
+                        placeholder="Ingresa tu Nombre">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="td_input">
+                    <label for="password1" class="td_label">Contraseña:</label>
+                </td>
+                <td class="td_input">
+                    <input class="input_register" type="password" name="password1" id="password1"
+                        placeholder="Ingresa tu Contraseña">
+                </td>
+            </tr>
+
+            <tr>
+                <td class="td_input">
+                    <label for="password2" class="td_label">Confirma tu</label>
+                    <label class="td_label">Contraseña:</label>
+                </td>
+                <td class="td_input">
+                    <input class="input_register" type="password" name="password2" id="password2"
+                        placeholder="Confirma tu Contraseña">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <div class="div_button">
+                        <button class="button1">Crear Usuario</button>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <div class="div_a">
+                        <p>Ir a:</p>
+                        <a class="td_a" href="/inicio_sesión">Iniciar Sesión</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+
+{% endblock %}

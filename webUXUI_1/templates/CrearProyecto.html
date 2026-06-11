@@ -1,0 +1,106 @@
+{% extends "index.html" %}
+
+{% block title %}<title>Crear Proyecto</title>{% endblock title%}
+
+{% block content %}
+
+{% load static %}
+
+<div class="div_menu_img1">
+    <div class="menu_img1">
+        <img src="{% static 'Img/menu.png' %}" alt="">
+    </div>
+</div>
+
+<nav class="nav_user">
+    <ul class="ul_user">
+        <li class="li_user">
+            <a class="a_user" href="/Proyectos">Proyectos</a>
+        </li>
+
+        <li class="li_user">
+            <a class="a_user" href="/proyectos_completados">Proyectos Completados</a>
+        </li class="li_user">
+
+        <li class="li_user">
+            <a class="a_user" href="/CrearProyecto">Crear Proyecto</a>
+        </li>
+
+        <li class="li_user">
+            <a class="a_user" href="/logout">Cerrar Sesión</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container_user">
+
+    <h1 class="container_title">Crear Nuevo Proyecto</h1>
+
+    <h1 class="container_title1">Crear Proyecto</h1>
+
+    <div class="container_date_user">
+
+        <form class="form_proyectos" action="" method="post">
+
+            {{error}}
+
+            {% csrf_token %}
+            {{form.as_p}}
+            <div class="div_button">
+                <button class="button1">Crear Proyecto</button>
+            </div>
+
+        </form>
+
+        <!-- <table class="table_inicioSesión">
+            <thead>
+                <th colspan="2">
+                    <h1 class="th_1">Ingresa tus Datos</h1>
+                </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="td_input">
+                        <label class="td_label" for="username">Nombre:</label>
+                    </td>
+                    <td class="td_input">
+                        <input class="input_register" type="text" name="username" id="username"
+                            placeholder="Ingresa tu Nombre">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="td_input">
+                        <label for="password" class="td_label">Contraseña:</label>
+                    </td>
+                    <td class="td_input">
+                        <input class="input_register" type="password" name="password" id="password"
+                            placeholder="Ingresa tu Contraseña">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div class="td_button">
+                            <button>Ingresar</button>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <div class="div_a">
+                            <a class="td_a" href="/crear_usuario">Crea tu Usuario</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table> -->
+    </div>
+</div>
+
+<div class="container_user1"></div>
+
+<script src="{% static 'web_1.js' %}"></script>
+
+{% endblock %}

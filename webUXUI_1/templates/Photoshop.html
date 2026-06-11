@@ -1,0 +1,69 @@
+{% extends "index.html" %}
+
+{% block title %}<title>Photoshop</title>{% endblock title%}
+
+
+{% block content %}
+
+{% load static %}
+
+<div class="main_container">
+
+    <div class="main_title">
+        <h1>Diseños en <br> Photoshop</h1>
+    </div>
+
+    <div class="description">
+        <p class="p_description p_description1">Las siguientes IMÁGENES han sido realizados por mi persona, teniendo
+            como referencia las
+            PUBLICIDADES encontradas en INTERNET.</p>
+    </div>
+
+    <p class="title_description title_description1">GALERÍA de IMÁGENES realizados en PHOTOSHOP:</p>
+
+    <div class="slider_images">
+
+        <div class="container_images" id="container_images">
+
+            <div class="container_img">
+                <img class="img_slider" src="{% static 'Img/PublicidadPhotoshop_1.png' %}" alt="">
+            </div>
+
+            <div class="container_img">
+                <img class="img_slider" src="{% static 'Img/PublicidadPhotoshop_1.png' %}" alt="">
+            </div>
+
+            <div class="container_img">
+                <img class="img_slider" src="{% static 'Img/PublicidadPhotoshop_1.png' %}" alt="">
+            </div>
+        </div>
+
+        <div class="slider_button slider_buttonPrev" id="buttonPrev">
+            <img src="{% static 'Img/icon-arrow-black.png' %}" alt="">
+        </div>
+
+        <div class="slider_button slider_buttonNext" id="buttonNext">
+            <img src="{% static 'Img/icon-arrow-black.png' %}" alt="">
+        </div>
+    </div>
+
+    <p class="title_description">IMÁGENES</p>
+
+    <div class="container_imgs" id="lista_imgs">
+        <div class="div_img">
+            <img src="{% static 'Img/PublicidadPhotoshop_1.png' %}" alt="">
+
+            <div class="details_img">
+
+                <div>
+                    <h5>Imagen 6</h5>
+                    <p class="precio">Precio: <br> <span>$ 50.00</span></p>
+                </div>
+
+                <a class="agregar_carrito" href="#" data-id="6">Agregar a Carrito</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
