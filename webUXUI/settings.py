@@ -86,6 +86,8 @@ WSGI_APPLICATION = 'webUXUI.wsgi.application'
 # waitress-serve --listen=*:8000 myapp.wsgi:application
 # waitress-serve --listen=127.0.0.1:5000 predict:app
 
+CSRF_TRUSTED_ORIGINS = ['https://webuxui.onrender.com']
+
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
