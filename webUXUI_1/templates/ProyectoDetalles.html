@@ -19,7 +19,7 @@
         </li>
 
         <li class="li_user">
-            <a class="a_user" href="/proyectos_completados">Proyectos Completados</a>
+            <a class="a_user" href="/ProyectoCompletado">Proyectos Completados</a>
         </li class="li_user">
 
         <li class="li_user">
@@ -54,11 +54,10 @@
             </div>
 
             <form action="{% url 'ProyectoCompletado' proyecto.id %}" method="POST">
-
                 {% csrf_token %}
+                <div class="div_button">
                     <button class="button1">Concluido</button>
-                <!-- <div class="div_button">
-                </div> -->
+                </div>
             </form>
         </form>
     </div>
