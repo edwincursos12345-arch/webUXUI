@@ -280,7 +280,7 @@ nav>ul>li:hover .nav_ul_1 {
 
 .div_logos {
     width: 100%;
-    background-color: rgb(255, 207, 118);
+    background-color: rgb(255, 230, 118);
     padding: 50px;
 
     display: flex;
@@ -300,7 +300,7 @@ nav>ul>li:hover .nav_ul_1 {
 }
 
 .div_logos3 {
-    background-color: rgb(255, 207, 118);
+    background-color: rgb(255, 230, 118);
     padding: 50px;
 
     display: block;
