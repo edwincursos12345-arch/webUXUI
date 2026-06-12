@@ -278,6 +278,10 @@ nav>ul>li:hover .nav_ul_1 {
     padding: 20px 0;
 }
 
+.p_description2 {
+    text-align: justify;
+}
+
 .div_logos {
     width: 100%;
     background-color: rgb(255, 230, 118);
@@ -377,7 +381,7 @@ nav>ul>li:hover .nav_ul_1 {
         flex-direction: column;
         align-items: center;
         gap: 20px;
-        background-color: rgb(250, 195, 93);
+        background-color: rgb(250, 208, 93);
     }
 
     .div_logos1 {
@@ -389,7 +393,7 @@ nav>ul>li:hover .nav_ul_1 {
     }
 
     .div_logos3 {
-        background-color: rgb(250, 195, 93);
+        background-color: rgb(250, 208, 93);
         text-align: center;
     }
 

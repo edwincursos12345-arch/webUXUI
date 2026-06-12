@@ -43,16 +43,16 @@ def crear_usuario(request):
             except IntegrityError:
                 return render(request, 'crear_usuario.html', {
                 'form': UserCreationForm,
-                "error": 'El Usuario ya Existe'
+                "error": 'El usuario ya existe'
                 })  
             except ValueError:
                 return render(request, 'crear_usuario.html', {
                 'form': UserCreationForm,
-                'error': 'Por Favor Proporciona Datos Válidos'
+                'error': 'Por favor proporciona datos válidos'
                 })
         return render(request, 'crear_usuario.html', {
                 'form': UserCreationForm,
-                "error": 'Las Contraseñas no Coinciden'
+                "error": 'Las contraseñas no coinciden'
         }) 
 
 @login_required
@@ -80,7 +80,7 @@ def inicio_sesión(request):
         if user is None:
             return render(request, 'inicio_sesión.html', {
         'form': AuthenticationForm,
-        'error': 'Usuario o Contraseña son Incorrectos'
+        'error': 'Usuario o contraseña son incorrectos'
         })
         else:
             login(request, user)
@@ -102,7 +102,7 @@ def CrearProyecto(request):
         except ValueError:
             return render(request, 'CrearProyecto.html', {
                 'form': ProyectoForm,
-                'error': 'Por Favor Proporciona Datos Válidos'
+                'error': 'Por favor proporciona datos válidos'
             })
         
 @login_required
@@ -119,7 +119,7 @@ def ProyectoDetalles(request, proyecto_id):
             form.save()
             return redirect('Proyectos')
         except ValueError:
-            return render(request, 'ProyectoDetalles.html', {'proyecto': proyecto, 'form':form, 'error': "Error al Actualizar el Proyecto"
+            return render(request, 'ProyectoDetalles.html', {'proyecto': proyecto, 'form':form, 'error': "Error al actualizar el proyecto"
         })
 
 @login_required
